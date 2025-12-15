@@ -1,0 +1,111 @@
+'use client'
+import React, { useState } from 'react';
+import { Menu, X, Plane, Landmark, Handshake, Route, Zap, CalendarCheck, CircleParking, Users, PhoneIncoming, Waypoints} from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from "next/navigation"
+import Image from "next/image"
+import IconLink  from './IconLink';
+interface HeaderProps {
+  userRole?: 'admin' | 'driver' | 'public' | null;
+  onLogout?: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //const navigate = useNavigate();
+ const pathname = usePathname();
+
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout();
+    }
+    //navigate('/login');
+    setIsMenuOpen(false);
+  };
+
+  const adminNavItems = [
+    { path: '/aboutus', label: 'About Us', icon : Users },
+    { path: '/airporttransfers', label: 'Airport Transfers', icon : Plane },
+    { path: '/cabt', label: 'Corporate Accounts & Business Travel', icon : Handshake },
+    { path: '/longdistancetravel', label: 'Long Distance Travel' , icon : Route},
+    { path: '/city2citytravel', label: 'City-t-City Travel', icon : Zap },
+    { path: '/eventstravel', label: 'Event & Seasonal Travel' , icon : CalendarCheck},
+    { path: '/fleet', label: 'Our Fleet', icon : CircleParking },
+    { path: '/popularjourneys', label: 'Popular Journeys', icon : Waypoints },
+    { path: '/contactus', label: 'Contact Us', icon : PhoneIncoming }
+  ];
+
+
+  const navItems = userRole === 'public' ? adminNavItems  : [];
+
+  return (
+    <header className="bg-brand-gray border-b border-blue-200 sticky top-0 z-50">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-24">
+          <Link href="/" className="flex items-center space-x-2">
+           <Image
+                        className="dark:invert"
+                        src="/a2blogo.svg"
+                        alt="Vercel logomark"
+                        width={120}
+                        height={120}
+                      />
+          
+          </Link>
+
+          {userRole && (
+            <>
+              <nav className="hidden md:flex space-x-8">
+                {navItems.map((item) => (
+                  <IconLink
+                    key={item.path}
+                    Icon = {item.icon}
+                    href={item.path}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      pathname === item.path
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-slate-700 hover:text-blue-600 hover:bg-blue-50'
+                    }`}
+                  >
+                    {item.label}
+                  </IconLink>
+                ))}
+              </nav>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden p-2 rounded-md text-slate-700 hover:text-blue-600 hover:bg-blue-50"
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </>
+          )}
+        </div>
+
+        {isMenuOpen && userRole && (
+          <div className="md:hidden py-4 border-t border-blue-200">
+            <nav className="flex flex-col space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    location.pathname === item.path
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-slate-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+           
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
