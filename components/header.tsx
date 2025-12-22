@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
   const adminNavItems = [
     { path: '/aboutus', label: 'About Us', icon : Users },
     { path: '/airporttransfers', label: 'Airport Transfers', icon : Plane },
-    { path: '/cabt', label: 'Corporate Accounts & Business Travel', icon : Handshake },
+    { path: '/businesstravel', label: 'Corporate Accounts & Business Travel', icon : Handshake },
     { path: '/longdistancetravel', label: 'Long Distance Travel' , icon : Route},
     { path: '/city2citytravel', label: 'City-t-City Travel', icon : Zap },
     { path: '/eventstravel', label: 'Event & Seasonal Travel' , icon : CalendarCheck},

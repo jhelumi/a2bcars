@@ -18,5 +18,16 @@ export const auth = betterAuth({
         enabled :true,
         autoSignIn: false
     },
+    user: {
+        additionalFields : {
+            role: {
+                type:"string",
+                input: false
+            }
+        }
+    },
     plugins: [nextCookies()]
 });
+
+export type Session = typeof auth.$Infer.Session;
+export type User = typeof auth.$Infer.Session.user;

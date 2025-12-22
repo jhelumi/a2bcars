@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev  -p 8080 --turbopack",
+    "dev": "prisma generate && next dev  -p 8080 --turbopack",
     "build": "prisma generate && next build",
     "start": "node_modules/next/dist/bin/next start",
     "lint": "eslint"
