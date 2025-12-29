@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import Header from "../../components/header"
-import { BrandCarousel } from "../../components/BrandCarousel";
-import {ThumbsUpIcon} from "lucide-react"
+
 
 export default function AirportTransfers() {
   return (
@@ -25,7 +24,7 @@ export default function AirportTransfers() {
          </p>
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">What’s Included in Your Airport Transfer</h2>
         
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>On-time pickup with clear communication</li>
           <li>Meet-and-greet service available on request</li>
           <li>Flight tracking for delays or early arrivals</li>
@@ -38,7 +37,7 @@ export default function AirportTransfers() {
         
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Airports We Cover</h2>
         
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>Heathrow Airport</li>
           <li>Gatwick Airport</li>
           <li>Luton Airport</li>
@@ -49,7 +48,7 @@ export default function AirportTransfers() {
         <p>If you need travel to another airport not listed here, just ask — we can usually accommodate it.</p>
 
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Choose A2B Cars for Airport Travel</h2>
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>Reliable, punctual service</li>
           <li>Excellent communication before, during, and after your trip</li>
           <li>Flight monitoring to avoid any waiting around</li>
@@ -59,7 +58,7 @@ export default function AirportTransfers() {
         </ul>
 
          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>

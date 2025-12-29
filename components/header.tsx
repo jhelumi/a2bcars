@@ -1,27 +1,19 @@
 'use client'
 import React, { useState } from 'react';
-import { Menu, X, Plane, Landmark, Handshake, Route, Zap, CalendarCheck, CircleParking, Users, PhoneIncoming, Waypoints} from 'lucide-react';
+import { Menu, X, Plane, Handshake, Route, Zap, CalendarCheck, CircleParking, Users, PhoneIncoming, Waypoints} from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from "next/navigation"
 import Image from "next/image"
 import IconLink  from './IconLink';
 interface HeaderProps {
-  userRole?: 'admin' | 'driver' | 'public' | null;
-  onLogout?: () => void;
+  userRole?: 'admin' | 'driver' | 'public' | null;  
 }
 
-const Header: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
+const Header: React.FC<HeaderProps> = ({ userRole }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  //const navigate = useNavigate();
+  
  const pathname = usePathname();
-
-  const handleLogout = () => {
-    if (onLogout) {
-      onLogout();
-    }
-    //navigate('/login');
-    setIsMenuOpen(false);
-  };
+ 
 
   const adminNavItems = [
     { path: '/aboutus', label: 'About Us', icon : Users },
@@ -73,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
               </nav>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-md text-slate-700 hover:text-blue-600 hover:bg-blue-50"
+                className="md:hidden p-2 rounded-md text-blue-50 hover:text-blue-600 hover:bg-blue-50"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -92,8 +84,8 @@ const Header: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     location.pathname === item.path
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-slate-700 hover:text-blue-600 hover:bg-blue-50'
+                      ? 'text-brand-blue bg-blue-50'
+                      : 'text-blue-50 hover:text-brand-blue hover:bg-blue-50'
                   }`}
                 >
                   {item.label}

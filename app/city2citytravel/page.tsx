@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import Header from "../../components/header"
-import { BrandCarousel } from "../../components/BrandCarousel";
-import {ThumbsUpIcon} from "lucide-react"
+
 
 export default function City2CityTravel() {
   return (
@@ -25,7 +24,7 @@ export default function City2CityTravel() {
          </p>
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Choose City-to-City Travel With Us</h2>
           
-            <ul className="list-disc  list-inside ml-4" >
+            <ul className="list-disc  list-inside ml-4 text-left" >
               <li>Comfortable, Spacious Executive Vehicles</li>
               <li>Professional, Polite, DBS-Checked Drivers</li>
               <li>Direct, Non-Stop Travel Between Your Chosen Cities</li>
@@ -41,7 +40,7 @@ export default function City2CityTravel() {
         
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Popular City-to-City Routes</h2>
         
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>London ↔ Oxford</li>
           <li>London ↔ Birmingham</li>
           <li>Oxford ↔ Cambridge</li>
@@ -53,11 +52,11 @@ export default function City2CityTravel() {
           <li>Any other UK city on request</li>
         </ul>
 
-        <p>If your route isn't listed, just ask — we can usually provide it.</p>
+        <p>If your route isn&apos;t listed, just ask — we can usually provide it.</p>
 
         
          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>
@@ -68,7 +67,7 @@ export default function City2CityTravel() {
       
       <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Corporate City-to-City Travel</h2>
        <p>Many of our corporate clients rely on us for regular travel between cities for:</p>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Meetings</li>
           <li>Conferences</li>
           <li>Office-to-Office Travel</li>

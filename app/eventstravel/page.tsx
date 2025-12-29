@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import Header from "../../components/header"
-import { BrandCarousel } from "../../components/BrandCarousel";
-import {ThumbsUpIcon} from "lucide-react"
+
 
 export default function AirportTransfers() {
   return (
@@ -25,7 +24,7 @@ export default function AirportTransfers() {
          </p>
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Types of Events We Cover</h2>
           <p>We provide travel for:</p>
-            <ul className="list-disc  list-inside ml-4" >
+            <ul className="list-disc  list-inside ml-4 text-left" >
               <li>Family celebrations & gatherings</li>
               <li>Weddings (guest and family transport)</li>
               <li>Concerts & live events</li>
@@ -44,7 +43,7 @@ export default function AirportTransfers() {
         
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Choose A2B Cars for Event Travel</h2>
         
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>Comfortable, spacious executive vehicles</li>   
           <li>Safe and calm driving</li>   
           <li>Reliable timings, even during busy events</li>   
@@ -59,7 +58,7 @@ export default function AirportTransfers() {
 
         
          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>
@@ -69,8 +68,8 @@ export default function AirportTransfers() {
         <p>All vehicles are executive-licensed with Buckinghamshire Council and maintained to a high standard.</p>
       
       <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Group Travel Options</h2>
-       <p>If you're travelling with a group, our Mercedes V-Class and Mercedes Vito 8-Seater offer these benefits:</p>
-         <ul className="list-disc  list-inside ml-4">
+       <p>If you&apos;re travelling with a group, our Mercedes V-Class and Mercedes Vito 8-Seater offer these benefits:</p>
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Spacious Seating for comfortable group travel</li>
           <li>Generous Luggage Capacity</li>
           <li>Ideal for Groups attending weddings, parties, and corporate events</li>         

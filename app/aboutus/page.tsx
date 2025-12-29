@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import Header from "../../components/header"
-import { BrandCarousel } from "../../components/BrandCarousel";
-import {ThumbsUpIcon} from "lucide-react"
+
 
 export default function AboutUs() {
   return (
@@ -25,7 +24,7 @@ export default function AboutUs() {
          </p>
         <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Commitment to You</h1>
         <p>When you travel with A2B Cars, you can expect:</p>
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>Professional, polite drivers</li>
           <li>Clean, executive-licensed vehicles</li>
           <li>On-time pickups</li>
@@ -37,7 +36,7 @@ export default function AboutUs() {
         <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why People Choose Us</h1>
         <p>Most of our customers come back again and again — some for more than a decade — because they know we do things properly. We respect your time, your privacy, and the trust you place in us. Whether you&apos;re a family travelling to the airport or a business sending staff across the country, we make sure the journey is handled professionally and with care.</p> 
         <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Values</h1>
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>Reliability</li>
           <li>Safety</li>
           <li>Professionalism</li>

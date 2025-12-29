@@ -9,7 +9,7 @@ export default function LongDistanceTravel() {
     <div className="min-h-screen  bg-zinc-50 font-sans dark:bg-black">
       
       <Header userRole="public"  />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-left">
        
         <div className="flex flex-col items-center gap-6 text-center  text-brand-gray sm:items-start sm:text-left">
           
@@ -25,7 +25,7 @@ export default function LongDistanceTravel() {
          </p>
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Choose Long-Distance Travel With Us</h2>
           
-            <ul className="list-disc  list-inside ml-4" >
+            <ul className="list-disc  list-inside ml-4 text-left" >
               <li>Comfortable, Spacious Executive Vehicles</li>
               <li>Professional, Polite, DBS-Checked Drivers</li>
               <li>Direct, Door-to-Door Travel With No Unnecessary Stops</li>              
@@ -41,7 +41,7 @@ export default function LongDistanceTravel() {
         
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Where We Travel</h2>
         
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>London</li>
           <li>Oxford</li>
           <li>Cambridge</li>
@@ -58,7 +58,7 @@ export default function LongDistanceTravel() {
 
         
          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>
@@ -69,7 +69,7 @@ export default function LongDistanceTravel() {
       
       <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Business & Corporate Long-Distance Travel</h2>
        <p>If you’re travelling for business or sending staff to meetings, conferences, or regional offices, we provide a calm, reliable service with:</p>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Clear communication</li>
           <li>Punctual pickups</li>
           <li>A comfortable, quiet environment for working during travel</li>

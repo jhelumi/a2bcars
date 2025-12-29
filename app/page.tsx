@@ -1,7 +1,7 @@
-import Image from "next/image";
+
 import Header from "../components/header"
 import { BrandCarousel } from "../components/BrandCarousel";
-import {Tag, Handshake, ShieldCheck, Award} from "lucide-react"
+import {Award} from "lucide-react"
 import { ReviewCarousel } from "@/components/Reviews";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
         
 
          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50"> Compliance Badges:</h1>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Licensed Operator – Buckinghamshire Council</li>
           <li>Fully Insured – Hire & Reward</li>
           <li>Enhanced DBS-Checked Drivers</li>
@@ -36,7 +36,7 @@ export default function Home() {
           </ul>
 
         <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Travel With Us</h1>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>On-time pickups, every time</li>
           <li>Clean, executive vehicles</li>
           <li>Professional, polite drivers</li>
@@ -46,7 +46,7 @@ export default function Home() {
           </ul>
 
   <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Services</h1>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Airport transfers (all major UK airports)</li>
           <li>Long-distance travel</li>
           <li>City-to-city travel</li>
@@ -56,7 +56,7 @@ export default function Home() {
           </ul>
 
  <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h1>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>

@@ -24,7 +24,7 @@ export default function PopularJOurneys() {
          </p>
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Our Journey Pages Are Helpful</h2>
         <p>Every town and village we cover has slightly different routes, timings, and travel considerations. To make things clearer, we’ve created simple journey pages that show:</p>
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>The typical route for your area</li>
           <li>Key motorways or roads used</li>
           <li>Travel expectations at different times of day</li>
@@ -36,7 +36,7 @@ export default function PopularJOurneys() {
       
       <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Popular Journey Types</h2>
         <p>Customers regularly book us for:</p>
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>Airport Transfers</li>
           <ul className="list-inside ml-8" >
             <li>Heathrow, Gatwick, Luton, Stansted, London City & Birmingham</li>
@@ -59,7 +59,7 @@ export default function PopularJOurneys() {
         
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">How to Use Our Journey Pages</h2>
         <p>How to Use Our Journey Pages</p>
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>The typical route your driver will take</li>
           <li>Local roads, major motorways, and expected travel flow</li>
           <li>Airport-specific route notes (M25, M4, M40, etc.)</li>
@@ -71,7 +71,7 @@ export default function PopularJOurneys() {
 
        <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Areas We Cover</h2>
         <p>We proudly serve over 100 villages and towns across:</p>
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>Buckinghamshire</li>
           <li>South Oxfordshire</li>
           <li>Hertfordshire (Aylesbury-side / Tring area)</li>                 
@@ -83,7 +83,7 @@ export default function PopularJOurneys() {
 
          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
         <p>All journeys are carried out in executive vehicles:</p>
-         <ul className="list-disc  list-inside ml-4" >
+         <ul className="list-disc  list-inside ml-4 text-left" >
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>                 

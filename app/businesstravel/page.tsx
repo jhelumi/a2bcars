@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import Header from "../../components/header"
-import { BrandCarousel } from "../../components/BrandCarousel";
-import {ThumbsUpIcon} from "lucide-react"
+
 
 export default function AirportTransfers() {
   return (
@@ -24,7 +23,7 @@ export default function AirportTransfers() {
 
          </p>
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Businesses Choose A2B Cars</h2>
-           <ul className="list-disc  list-inside ml-4" >
+           <ul className="list-disc  list-inside ml-4 text-left" >
             <li>Professional, Polite, Experienced Drivers</li>
             <li>Executive-Standard Vehicles for a Comfortable Journey</li>
             <li>Reliable, On-Time Pickups for Important Meetings</li>
@@ -40,7 +39,7 @@ export default function AirportTransfers() {
         
         <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Corporate Airport Travel</h2>
           <p>We handle all major UK airports and provide:</p>
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>Flight monitoring</li>
           <li>Meet-and-greet options</li>
           <li>Help with luggage</li>
@@ -53,7 +52,7 @@ export default function AirportTransfers() {
 
         
          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
-         <ul className="list-disc  list-inside ml-4">
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
           <li>Mercedes V-Class</li>
@@ -63,8 +62,8 @@ export default function AirportTransfers() {
         <p>All vehicles are licensed by Buckinghamshire Council and maintained to an executive standard for safety, comfort, and a strong professional appearance.</p>
       
       <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Corporate Account Benefits</h2>
-       <p>Streamline your company's transport needs with our corporate account benefits:</p>
-         <ul className="list-disc  list-inside ml-4">
+       <p>Streamline your company&apos;s transport needs with our corporate account benefits:</p>
+         <ul className="list-disc  list-inside ml-4 text-left">
           <li>Priority bookings for your company</li>
           <li>Simple, clear invoicing</li>
           <li>Monthly statements</li>

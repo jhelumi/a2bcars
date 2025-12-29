@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "../../components/header"
-import {Mail, MapPin, Phone, Hourglass} from "lucide-react"
+import {Mail, Phone, Hourglass} from "lucide-react"
 import Link from "next/link";
 
 export default function ContactUs() {
@@ -52,7 +52,7 @@ export default function ContactUs() {
         
         <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Booking a Journey</h1>
         <p>To get a personalised quote, please tell us:</p>         
-        <ul className="list-disc  list-inside ml-4">
+        <ul className="list-disc  list-inside ml-4 text-left">
           <li>Your pickup address</li>
           <li>Your destination</li>
           <li>Your travel date and time</li>
@@ -95,7 +95,7 @@ export default function ContactUs() {
 
           <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Compliance & Licensing</h1>
           <p>A2B Cars operates as a fully licensed executive private hire service:</p>         
-            <ul className="list-disc  list-inside ml-4">
+            <ul className="list-disc  list-inside ml-4 text-left">
               <li>Buckinghamshire Council licensed</li>
               <li>Fully insured</li>
               <li>DBS-checked drivers</li>
@@ -106,7 +106,7 @@ export default function ContactUs() {
 
             <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Please Read</h1>
           <p>For full transparency, please review our:</p>         
-            <ul className="list-disc  list-inside ml-4">
+            <ul className="list-disc  list-inside ml-4 text-left">
               <li>[Terms & Conditions]</li>
               <li>[Privacy Policy]</li>
               
