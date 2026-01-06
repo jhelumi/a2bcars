@@ -2,21 +2,47 @@
 import React, { useState } from 'react';
 import { Plus, Search, Filter, Edit, Trash2, MapPin, Calendar, User } from 'lucide-react';
 import { toast } from 'react-toastify';
-import Header from '../../../components/header';
-import Footer from '../../../components/footer';
+
 import ReservationForm from '../../../components/ReservationForm';
 import AdminHeader from '@/components/AdminHeader';
 
-const AdminReservations: React.FC = () => {
+const AdminRouteContents: React.FC = () => {
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+const [pageRoutes, setpageRoutes] = useState ([] || null);
+   
+const fetchRoutes = async () => {
+     
+      try {
+      
+        const res = await fetch("/api/ourroutes?searchStr="+ searchTerm, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+       
+      });
 
+      if (res.ok) {
+        const result = await res.json();
+        console.log("db routes: ", result)   
+        setpageRoutes(result);     
+      }
+      } catch (error) {
+        console.error("Error fetching quote:", error);
+        alert("Failed to calculate quote. Please try again.");
+      } finally {
+        console.log("ERROR in fetching data from server:" )
+      }
+    };
   const handleLogout = () => {
     localStorage.removeItem('userRole');
     localStorage.removeItem('userEmail');
   };
 
+  React.useEffect(() => 
+  {
+    fetchRoutes();
+  },[searchTerm])
   const mockDrivers = [
     { id: '1', name: 'Mike Johnson' },
     { id: '2', name: 'David Brown' },
@@ -63,7 +89,7 @@ const AdminReservations: React.FC = () => {
     },
   ];
 
-  const handleCreateReservation = (data: any) => {
+  const handleCreateRoute = (data: any) => {
     console.log('Creating reservation:', data);
     toast.success('Reservation created successfully!');
     setShowCreateForm(false);
@@ -103,15 +129,15 @@ const AdminReservations: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900">Reservations</h1>
-            <p className="text-slate-600 mt-2">Manage customer reservations and assignments</p>
+            <h1 className="text-3xl font-bold text-slate-900">Our Routes</h1>
+            <p className="text-slate-600 mt-2">Manage custom route page contents</p>
           </div>
           <button
             onClick={() => setShowCreateForm(true)}
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors flex items-center space-x-2"
           >
             <Plus className="h-5 w-5" />
-            <span>New Reservation</span>
+            <span>New Route</span>
           </button>
         </div>
 
@@ -129,7 +155,7 @@ const AdminReservations: React.FC = () => {
                   </button>
                 </div>
                 <ReservationForm
-                  onSubmit={handleCreateReservation}
+                  onSubmit={handleCreateRoute}
                   drivers={mockDrivers}
                 />
               </div>
@@ -174,20 +200,14 @@ const AdminReservations: React.FC = () => {
               <thead className="bg-blue-50">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                    Customer
+                    Title
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                    Route
+                    Address Url
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                    Schedule
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                    Driver
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                    Fare
-                  </th>
+                    Data
+                  </th>                                  
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
                     Status
                   </th>
@@ -197,48 +217,21 @@ const AdminReservations: React.FC = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-blue-100">
-                {filteredReservations.map((reservation) => (
-                  <tr key={reservation.id} className="hover:bg-blue-50">
+                {pageRoutes.map((pageRoute) => (
+                  <tr key={pageRoute.id} className="hover:bg-blue-50">
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div>
-                        <div className="text-sm font-medium text-slate-900">{reservation.customerName}</div>
-                        <div className="text-sm text-slate-500">{reservation.customerPhone}</div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="text-sm text-slate-900">
-                        <div className="flex items-center space-x-1 mb-1">
-                          <MapPin className="h-4 w-4 text-green-500" />
-                          <span>{reservation.startLocation}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <MapPin className="h-4 w-4 text-red-500" />
-                          <span>{reservation.endLocation}</span>
-                        </div>
-                      </div>
-                    </td>
+                       <div className="text-sm font-medium text-slate-900">{pageRoute.title}</div>
+                    </td>                  
+                   <td className="px-6 py-4 whitespace-nowrap">
+                      
+                        <div className="text-sm text-slate-500">{pageRoute.address}</div>
+                      
+                    </td>   
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-slate-900">
-                        <div className="flex items-center space-x-1 mb-1">
-                          <Calendar className="h-4 w-4 text-slate-400" />
-                          <span>{new Date(reservation.startDateTime).toLocaleDateString()}</span>
-                        </div>
-                        <div className="text-slate-500">
-                          {new Date(reservation.startDateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} - 
-                          {new Date(reservation.endDateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                        </div>
-                      </div>
+                      <div className="text-sm text-slate-500">{pageRoute.seoKeywords}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-1">
-                        <User className="h-4 w-4 text-slate-400" />
-                        <span className="text-sm text-slate-900">{reservation.driverName}</span>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="text-sm font-medium text-slate-900">${reservation.fareAmount.toFixed(2)}</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td><div className="text-sm text-slate-500">Draft</div></td>
+                    {/* <td className="px-6 py-4 whitespace-nowrap">
                       <select
                         value={reservation.status}
                         onChange={(e) => handleUpdateStatus(reservation.id, e.target.value)}
@@ -249,7 +242,7 @@ const AdminReservations: React.FC = () => {
                         <option value="Completed">Completed</option>
                         <option value="Cancelled">Cancelled</option>
                       </select>
-                    </td>
+                    </td> */}
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex space-x-2">
                         <button className="text-blue-600 hover:text-blue-900">
@@ -268,8 +261,9 @@ const AdminReservations: React.FC = () => {
         </div>
       </main>
 
+     
     </div>
   );
 };
 
-export default AdminReservations;
+export default AdminRouteContents;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "../../components/header"
 import {Mail, Phone, Hourglass} from "lucide-react"
 import Link from "next/link";
+import GetQuote from "@/components/GetQuote";
 
 export default function ContactUs() {
   return (
@@ -16,13 +17,8 @@ export default function ContactUs() {
           <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
            Get in Touch
           </h1>
-         
-          <p className="text-lg leading-8 dark:text-zinc-400">
-          If you’d like a quotation or have any questions, just get in touch with us.
+          <div className="flex items-center justify-center gap-2"><GetQuote/></div>
 
-          <br/>We reply quickly and are always happy to help.
-
-         </p>
         <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Contact Details</h1>
           <div className="space-y-3">
               <div className="flex items-center space-x-2">                

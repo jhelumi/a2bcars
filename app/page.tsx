@@ -3,6 +3,7 @@ import Header from "../components/header"
 import { BrandCarousel } from "../components/BrandCarousel";
 import {Award} from "lucide-react"
 import { ReviewCarousel } from "@/components/Reviews";
+import GetQuote from "@/components/GetQuote";
 
 export default function Home() {
   return (
@@ -23,10 +24,8 @@ export default function Home() {
           <br/>Our drivers are fully licensed, DBS-checked, insured, and experienced. We don&apos;t rush jobs, we don&apos;t overbook, and we don&apos;t send random drivers. When you book with us, we look after your journey properly from start to finish.</p>
 
         
-        <span></span><Award className="h-24 w-24 text-brand-blue"/>  Trusted & Compliant 
-        
 
-         <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50"> Compliance Badges:</h1>
+         <h2 className="flex text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50"><Award className="h-9 w-9 text-brand-blue"/> Compliance Badges:</h2>
          <ul className="list-disc  list-inside ml-4 text-left">
           <li>Licensed Operator – Buckinghamshire Council</li>
           <li>Fully Insured – Hire & Reward</li>
@@ -35,7 +34,7 @@ export default function Home() {
           <li>Executive-Standard Vehicles</li>
           </ul>
 
-        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Travel With Us</h1>
+        <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Why Travel With Us</h2>
          <ul className="list-disc  list-inside ml-4 text-left">
           <li>On-time pickups, every time</li>
           <li>Clean, executive vehicles</li>
@@ -45,7 +44,7 @@ export default function Home() {
           <li>Pre-booked service only (no taxi ranks, no surprises)</li>
           </ul>
 
-  <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Services</h1>
+        <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Services</h2>
          <ul className="list-disc  list-inside ml-4 text-left">
           <li>Airport transfers (all major UK airports)</li>
           <li>Long-distance travel</li>
@@ -55,7 +54,7 @@ export default function Home() {
           
           </ul>
 
- <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h1>
+        <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Our Vehicles</h2>
          <ul className="list-disc  list-inside ml-4 text-left">
           <li>Mercedes S-Class</li>
           <li>Mercedes E-Class</li>
@@ -68,13 +67,13 @@ export default function Home() {
 <p>
 All vehicles are executive-licensed with Buckinghamshire Council and maintained to a high standard.</p>
 
-<h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Trusted by Businesses & Regular Travellers</h1>
+<h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Trusted by Businesses & Regular Travellers</h2>
          <ul>
           <li>We work with companies, families, and frequent flyers across Buckinghamshire, South Oxfordshire & Hertfordshire. Many of our clients have stayed with us for years because they trust us to do things properly and consistently.</li>
                   
           </ul>
 
-<h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Customer Reviews</h1>
+<h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Customer Reviews</h2>
          <ul className="list-inside">
           <li>We work with companies, families, and frequent flyers across Buckinghamshire, South Oxfordshire & Hertfordshire. Many of our clients have stayed with us for years because they trust us to do things properly and consistently.</li>
                   
@@ -83,14 +82,7 @@ All vehicles are executive-licensed with Buckinghamshire Council and maintained 
   <ReviewCarousel/>
 </div>
 
-<h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">Get a Quote</h1>
-       <p>
-
-We don’t offer instant online pricing. Every journey is unique.
-Tell us about your journey, and we’ll send a personalised quotation quickly.
-
-[Get a Quote]
-</p>
+<GetQuote/>
 
         </div>
 

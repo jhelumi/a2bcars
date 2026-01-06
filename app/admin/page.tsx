@@ -9,7 +9,7 @@ const AdminDashboard: React.FC = () => {
  
   const stats = [
     {
-      title: 'Total Drivers',
+      title: 'Total Enquiries',
       value: 24,
       icon: Users,
       trend: { value: 12, isPositive: true },
@@ -158,8 +158,7 @@ const AdminDashboard: React.FC = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
+      
     </div>
   );
 };

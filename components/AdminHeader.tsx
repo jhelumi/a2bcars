@@ -25,8 +25,10 @@ const AdminHeader: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
 
   const adminNavItems = [
     { path: '/admin', label: 'Dashboard' },
+    { path: '/admin/enquiries', label: 'Enquiries' },
     { path: '/admin/reservations', label: 'Reservations' },
     { path: '/admin/drivers', label: 'Drivers' },
+    { path: '/admin/routecontents', label: 'Routes' },
     { path: '/admin/reports', label: 'Reports' },
   ];
 

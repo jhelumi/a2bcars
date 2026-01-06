@@ -31,10 +31,7 @@ export function BrandCarousel() {
 
     { "title": "Long Distance Travel",
       "description" : "Travelling to or from the airport should feel simple and stress-free. At A2B Cars, we make sure your journey is calm, comfortable, and on time — every single time. Whether it’s an early-morning departure, a late-night arrival, or a long-haul return, we look after everything carefully from the moment you book with us" 
-    },
-    { "title": "Event & Seasonal Travel",
-      "description" : "Travelling to or from the airport should feel simple and stress-free. At A2B Cars, we make sure your journey is calm, comfortable, and on time — every single time. Whether it’s an early-morning departure, a late-night arrival, or a long-haul return, we look after everything carefully from the moment you book with us"
-    }
+    }    
   ]
   return (
     <Carousel

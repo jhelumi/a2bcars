@@ -179,8 +179,7 @@ const AdminReports: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
-    </div>
+          </div>
   );
 };
 

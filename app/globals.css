@@ -131,3 +131,42 @@
     @apply bg-background text-foreground;
    }
 }
+
+h1 {
+   font-size: 2rem;
+   font-weight: 700;
+   color: #59abe3;
+}
+h2 {
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: #59abe3;
+}
+h3 {
+   font-size: 1.25rem;
+   font-weight: 500;
+   color: #59abe3;
+}
+h4 {
+   font-size: 1rem;
+   font-weight: 400;
+   color: #59abe3;
+}
+ul { 
+   list-style-type: disc; 
+   list-style-position: inside; 
+}
+ol { 
+   list-style-type: decimal; 
+   list-style-position: inside; 
+}
+ul ul, ol ul { 
+   list-style-type: circle; 
+   list-style-position: inside; 
+   margin-left: 15px; 
+}
+ol ol, ul ol { 
+   list-style-type: lower-latin; 
+   list-style-position: inside; 
+   margin-left: 15px; 
+}

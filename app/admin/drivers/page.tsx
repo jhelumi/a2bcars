@@ -201,8 +201,7 @@ const AdminDrivers: React.FC = () => {
           </div>
         )}
       </main>
-
-      <Footer />
+ 
     </div>
   );
 };
