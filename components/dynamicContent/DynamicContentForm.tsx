@@ -4,10 +4,10 @@ import { useForm } from 'react-hook-form';
 import { DynamicPageSchema, DynamicPageFormData } from './dynamicContentTypes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import ReactQuill from 'react-quill-new';
-import  'react-quill-new/dist/quill.snow.css';
+
 import { Loader2, Send } from 'lucide-react';
 
-import Editor from '../editor/Editor';
+
 import { useRouter } from 'next/navigation';
 
 const toolbarModules = {
@@ -51,7 +51,8 @@ const DynamicContentForm = () => {
       },
     });
   
-    const onEditorChange = (data) => {
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    const onEditorChange = (data:any) => {
       console.log("Rendered Html: ", data)
         setContentData(data);     
 

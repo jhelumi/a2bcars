@@ -87,14 +87,9 @@ export default function AuthClientPage () {
         <div className="bg-white py-8 px-6 shadow-lg rounded-lg border border-blue-200">
           <LoginForm onSubmit={handleLogin} isLoading={isLoading} />
           
-          <div className="mt-6 p-4 bg-blue-50 rounded-md">
-            <p className="text-sm text-slate-600 mb-2">Demo Credentials:</p>
-            <p className="text-xs text-slate-500">
-              Admin: admin@taxipro.com / admin123<br />
-              Driver: driver@taxipro.com / driver123
-            </p>
-            <Button onClick= { () => handleSignUp ({email:"test@test.com", password:"Password@12345", name: "Test user"})}>SignUp</Button>
-          </div>
+          {/* <div className="mt-6 p-4 bg-blue-50 rounded-md">            
+            <Button onClick= { () => handleSignUp ({email:"masood@a2bcars.net", password:"Password@12345", name: "Masood Ahmed"})}>SignUp</Button>
+          </div> */}
         </div>
       </div>
     </div>

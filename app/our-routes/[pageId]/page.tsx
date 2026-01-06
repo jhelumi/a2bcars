@@ -31,7 +31,7 @@ export default async  function OurRoutes({ params}: {params: Promise<{ pageId: s
            <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
            {page.title}
           </h1>
-            {page && <RouteRenderer data= {contents} />}</div>
+            {page && <RouteRenderer data={contents ?? ""} />}</div>
         </div>
        <div>
        </div>

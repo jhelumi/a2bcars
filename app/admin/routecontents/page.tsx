@@ -5,12 +5,13 @@ import { toast } from 'react-toastify';
 
 import ReservationForm from '../../../components/ReservationForm';
 import AdminHeader from '@/components/AdminHeader';
+import { RoutePage } from './pageRouteType';
 
 const AdminRouteContents: React.FC = () => {
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-const [pageRoutes, setpageRoutes] = useState ([] || null);
+  const [pageRoutes, setpageRoutes] = useState<RoutePage[] | null> (null);
    
 const fetchRoutes = async () => {
      
@@ -217,7 +218,7 @@ const fetchRoutes = async () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-blue-100">
-                {pageRoutes.map((pageRoute) => (
+                {pageRoutes && pageRoutes.map((pageRoute) => (
                   <tr key={pageRoute.id} className="hover:bg-blue-50">
                     <td className="px-6 py-4 whitespace-nowrap">
                        <div className="text-sm font-medium text-slate-900">{pageRoute.title}</div>
