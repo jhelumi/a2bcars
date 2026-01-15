@@ -25,6 +25,7 @@ model User {
   sessions      Session[]
   accounts      Account[]
   routePages    RoutePage[]
+  enquiries     Enquiry[]
 
   @@unique([email])
   @@map("user")
@@ -89,4 +90,59 @@ model RoutePage {
 
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Enquiry {
+  id              String   @id @default(uuid())
+  customerType    CutomerType   
+  companyName     String?
+  journeyType     JorneyType
+  name            String
+  email           String?
+  phone           String
+  startLocation   String
+  endLocation     String
+  travelDate      DateTime
+  travelTime      String
+
+  returnDate      DateTime?
+  returnTime      String?
+  adults          Int
+  children        Int
+  luggageType     LuggageType?
+    
+  airportName     String?
+  terminal        String?
+  flightNumber    String?
+  meetAndGreet    Boolean?
+  
+  specialRequirements String?
+  status          EnquiryStatus
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  userId          String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum JorneyType {
+  Single
+  Return
+  Airport
+}
+enum CutomerType {
+  Personal
+  Corporate  
+}
+
+enum LuggageType {
+  Light
+  Standard
+  Heavy
+}
+
+enum EnquiryStatus {
+  Open
+  InProgress
+  Closed
 }

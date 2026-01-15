@@ -1,10 +1,10 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { Menu, X, Car, LogOut } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname, useRouter } from "next/navigation"
-import Image from "next/image"
-import { authClient } from "@/lib/auth-client"
+import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { authClient } from '@/lib/auth-client';
 
 interface HeaderProps {
   userRole?: 'admin' | 'driver' | null;
@@ -14,13 +14,13 @@ interface HeaderProps {
 const AdminHeader: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
- const pathname = usePathname();
+  const pathname = usePathname();
+  const { data } = authClient.useSession();
 
-  const handleLogout = async() => {
-    await authClient.signOut();          
+  const handleLogout = async () => {
+    await authClient.signOut();
     setIsMenuOpen(false);
-    router.replace("/auth");
-    
+    router.replace('/auth');
   };
 
   const adminNavItems = [
@@ -37,21 +37,25 @@ const AdminHeader: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
     { path: '/driver/schedule', label: 'Schedule' },
   ];
 
-  const navItems = userRole === 'admin' ? adminNavItems : userRole === 'driver' ? driverNavItems : [];
+  const navItems =
+    userRole === 'admin'
+      ? adminNavItems
+      : userRole === 'driver'
+        ? driverNavItems
+        : [];
 
   return (
     <header className="bg-white border-b border-blue-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
-           <Image
-                        className="dark:invert"
-                        src="/a2blogo-reverse.svg"
-                        alt="Vercel logomark"
-                        width={120}
-                        height={120}
-                      />
-          
+            <Image
+              className="dark:invert"
+              src="/a2blogo-reverse.svg"
+              alt="Vercel logomark"
+              width={120}
+              height={120}
+            />
           </Link>
 
           {userRole && (
@@ -73,7 +77,9 @@ const AdminHeader: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
               </nav>
 
               <div className="hidden md:flex items-center space-x-4">
-                <span className="text-sm text-slate-600 capitalize">{userRole}</span>
+                <span className="text-sm text-slate-600 capitalize">
+                  {data?.user.name}
+                </span>
                 <button
                   onClick={handleLogout}
                   className="flex items-center space-x-1 px-3 py-2 text-sm text-slate-700 hover:text-blue-600 transition-colors"
@@ -88,7 +94,11 @@ const AdminHeader: React.FC<HeaderProps> = ({ userRole, onLogout }) => {
                 className="md:hidden p-2 rounded-md text-slate-700 hover:text-blue-600 hover:bg-blue-50"
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </>
           )}

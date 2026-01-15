@@ -39,26 +39,50 @@ export async function GET(request: NextRequest) {
   if(!session?.user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
+    try{
+        const searchParams = request.nextUrl.searchParams
+        const searchStr = searchParams.get('searchStr')
+        const searchStatus = searchParams.get('status')
+        
+          
+        const page = await prisma.routePage.findMany({
+          where: {
+            OR: [
+            {
+              address: { contains: searchStr ?? ""},
+            },
+            { title: { contains: searchStr ?? ""} },
+            ],
+            
+          },
+          orderBy: {
+              title: 'desc',
+            },
+        });
 
-  const searchParams = request.nextUrl.searchParams
-  const searchStr = searchParams.get('searchStr')
-  const searchStatus = searchParams.get('status')
-  
-console.log("QueryString : ", searchStr)
-  const page = await prisma.routePage.findMany({
-    where: {
-      OR: [
-      {
-        address: { contains: searchStr ?? ""},
-      },
-      { title: { contains: searchStr ?? ""} },
-      ],
-       
-    },
-     orderBy: {
-        title: 'desc',
-      },
+        return NextResponse.json(page)
+      }
+      catch(error)
+        {
+          console.log("ERROR: ", error)
+        }
+}
+
+export async function DELETE(request: NextRequest) {
+  const session = await auth.api.getSession({
+    headers: await headers(),
   });
 
+  if(!session?.user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  }
+
+  const searchParams = request.nextUrl.searchParams
+  const pageId = searchParams.get('id') ?? "0"
+ 
+  const page = await prisma.routePage.delete({
+    where: { id:   pageId }     
+  });
+  
   return NextResponse.json(page)
 }

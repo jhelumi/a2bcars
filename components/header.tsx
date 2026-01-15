@@ -1,48 +1,66 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
-import { Menu, X, Plane, Handshake, Route, Zap, CalendarCheck, CircleParking, Users, PhoneIncoming, Waypoints} from 'lucide-react';
+import {
+  Menu,
+  X,
+  Plane,
+  Handshake,
+  Route,
+  Zap,
+  CalendarCheck,
+  CircleParking,
+  Users,
+  PhoneIncoming,
+  Waypoints,
+} from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from "next/navigation"
-import Image from "next/image"
-import IconLink  from './IconLink';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import IconLink from './IconLink';
+import { Toaster } from '@/components/ui/sonner';
 interface HeaderProps {
-  userRole?: 'admin' | 'driver' | 'public' | null;  
+  userRole?: 'admin' | 'driver' | 'public' | null;
 }
 
 const Header: React.FC<HeaderProps> = ({ userRole }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
- const pathname = usePathname();
- 
+
+  const pathname = usePathname();
 
   const adminNavItems = [
-    { path: '/aboutus', label: 'About Us', icon : Users },
-    { path: '/airporttransfers', label: 'Airport Transfers', icon : Plane },
-    { path: '/businesstravel', label: 'Corporate Accounts & Business Travel', icon : Handshake },
-    { path: '/longdistancetravel', label: 'Long Distance Travel' , icon : Route},
-    { path: '/city2citytravel', label: 'City-t-City Travel', icon : Zap },
-    { path: '/eventstravel', label: 'Event & Seasonal Travel' , icon : CalendarCheck},
-    { path: '/fleet', label: 'Our Fleet', icon : CircleParking },
-    { path: '/popularjourneys', label: 'Popular Journeys', icon : Waypoints },
-    { path: '/contactus', label: 'Contact Us', icon : PhoneIncoming }
+    { path: '/aboutus', label: 'About Us', icon: Users },
+    { path: '/airporttransfers', label: 'Airport Transfers', icon: Plane },
+    {
+      path: '/businesstravel',
+      label: 'Corporate Accounts & Business Travel',
+      icon: Handshake,
+    },
+    { path: '/longdistancetravel', label: 'Long Distance Travel', icon: Route },
+    { path: '/city2citytravel', label: 'City-t-City Travel', icon: Zap },
+    {
+      path: '/eventstravel',
+      label: 'Event & Seasonal Travel',
+      icon: CalendarCheck,
+    },
+    { path: '/fleet', label: 'Our Fleet', icon: CircleParking },
+    { path: '/popularjourneys', label: 'Popular Journeys', icon: Waypoints },
+    { path: '/contactus', label: 'Contact Us', icon: PhoneIncoming },
   ];
 
-
-  const navItems = userRole === 'public' ? adminNavItems  : [];
+  const navItems = userRole === 'public' ? adminNavItems : [];
 
   return (
     <header className="bg-brand-gray border-b border-blue-200 sticky top-0 z-50">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <Link href="/" className="flex items-center space-x-2">
-           <Image
-                        className="dark:invert"
-                        src="/a2blogo.svg"
-                        alt="Vercel logomark"
-                        width={120}
-                        height={120}
-                      />
-          
+            <Image
+              className="dark:invert"
+              src="/a2blogo.svg"
+              alt="Vercel logomark"
+              width={120}
+              height={120}
+            />
           </Link>
 
           {userRole && (
@@ -51,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ userRole }) => {
                 {navItems.map((item) => (
                   <IconLink
                     key={item.path}
-                    Icon = {item.icon}
+                    Icon={item.icon}
                     href={item.path}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       pathname === item.path
@@ -68,7 +86,11 @@ const Header: React.FC<HeaderProps> = ({ userRole }) => {
                 className="md:hidden p-2 rounded-md text-blue-50 hover:text-blue-600 hover:bg-blue-50"
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </>
           )}
@@ -91,11 +113,11 @@ const Header: React.FC<HeaderProps> = ({ userRole }) => {
                   {item.label}
                 </Link>
               ))}
-           
             </nav>
           </div>
         )}
       </div>
+      <Toaster />
     </header>
   );
 };

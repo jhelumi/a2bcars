@@ -1,25 +1,35 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
-import { Plus, Search, Edit, Trash2, User, Phone, Mail, Car, DollarSign } from 'lucide-react';
+import {
+  Plus,
+  Search,
+  Edit,
+  Trash2,
+  User,
+  Phone,
+  Mail,
+  Car,
+  DollarSign,
+} from 'lucide-react';
 import { toast } from 'react-toastify';
-import Header from '../../../components/header';
+
 import Footer from '../../../components/footer';
 import AdminHeader from '@/components/AdminHeader';
 
 const Customers: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
- 
-
   return (
     <div className="min-h-screen bg-blue-50">
-       <AdminHeader userRole="admin" />
-      
+      <AdminHeader userRole="admin" />
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold text-slate-900">Drivers</h1>
-            <p className="text-slate-600 mt-2">Manage driver profiles and performance</p>
+            <p className="text-slate-600 mt-2">
+              Manage driver profiles and performance
+            </p>
           </div>
           <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors flex items-center space-x-2">
             <Plus className="h-5 w-5" />
@@ -39,8 +49,6 @@ const Customers: React.FC = () => {
             />
           </div>
         </div>
-
-      
       </main>
 
       <Footer />
