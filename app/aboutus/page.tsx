@@ -11,17 +11,19 @@ export default async function AboutUs() {
             About Us
           </h1>
 
-          <p className="text-lg leading-8 dark:text-zinc-400">
+          <p>
             A2B Cars was founded with one simple goal — to make every journey
-            smooth, calm, and reliable. We’ve been operational since 1999, and
-            over the years we’ve built our reputation on honesty, punctuality,
-            and looking after our customers properly from start to finish.
+            smooth, calm, and reliable. We&apos;ve been operational since 1999,
+            and over the years we&apos;ve built our reputation on honesty,
+            punctuality, and looking after our customers properly from start to
+            finish.
             <br />
-            We’re a dedicated team, and we treat every booking with the same
-            level of care, whether it’s an early-morning airport run, a
-            long-distance trip, or an important business journey. We don’t cut
-            corners, we don’t rush jobs, and we always communicate clearly so
-            you know exactly what’s happening at every step.
+            We&apos;re a dedicated team, and we treat every booking with the
+            same level of care, whether it&apos;s an early-morning airport run,
+            a long-distance trip, or an important business journey. We
+            don&apos;t cut corners, we don&apos;t rush jobs, and we always
+            communicate clearly so you know exactly what&apos;s happening at
+            every step.
           </p>
           <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Our Commitment to You

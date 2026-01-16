@@ -10,11 +10,17 @@ export default function Quotation() {
       <Header userRole="public" />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-4 gap-4">
-          <div>
+          <div className="col-span-12 md:col-span-6">
             <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
               Quotation Form
             </h1>
+            <p>
+              Please use this form for requesting a hassle free quote. If you
+              require an taxi within 24hrs, please call our office on 01844
+              208125.
+            </p>
           </div>
+
           <div className="col-span-12 md:col-span-6 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
             <div className="p-8">
               <BookingForm />

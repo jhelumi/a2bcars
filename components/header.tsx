@@ -12,6 +12,7 @@ import {
   Users,
   PhoneIncoming,
   Waypoints,
+  Phone,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -62,7 +63,10 @@ const Header: React.FC<HeaderProps> = ({ userRole }) => {
               height={120}
             />
           </Link>
-
+          <div className="flex text-white lg:text-xl md:text-sm font-semibold gap-2">
+            <Phone className="h-6 w-6 text-blue-400" />
+            01844 208125
+          </div>
           {userRole && (
             <>
               <nav className="hidden md:flex space-x-8">
