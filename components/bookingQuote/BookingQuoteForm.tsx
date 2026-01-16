@@ -30,7 +30,7 @@ const BookingForm: React.FC = () => {
     defaultValues: {
       customerType: 'Personal',
       journeyType: 'Single',
-      name: 'arshad',
+      name: '',
       adults: 1,
       children: 0,
       luggageType: 'Standard',
@@ -240,6 +240,8 @@ const BookingForm: React.FC = () => {
             <label className="text-sm font-medium text-slate-700">Adults</label>
             <input
               type="number"
+              min={0}
+              max={12}
               {...register('adults')}
               className="w-full p-3 rounded-xl border border-slate-200 outline-none"
             />
@@ -250,6 +252,8 @@ const BookingForm: React.FC = () => {
             </label>
             <input
               type="number"
+              min={0}
+              max={12}
               {...register('children')}
               className="w-full p-3 rounded-xl border border-slate-200 outline-none"
             />
