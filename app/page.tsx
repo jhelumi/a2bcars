@@ -4,6 +4,7 @@ import { Award } from 'lucide-react';
 import { ReviewCarousel } from '@/components/Reviews';
 import GetQuote from '@/components/GetQuote';
 import TripAdvisor from '@/components/tripAdvisor';
+import OurServices from '@/components/ourServices';
 
 export default function Home() {
   return (
@@ -52,16 +53,7 @@ export default function Home() {
             <li>Pre-booked service only (no taxi ranks, no surprises)</li>
           </ul>
 
-          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-            Our Services
-          </h2>
-          <ul className="list-disc  list-inside ml-4 text-left">
-            <li>Airport transfers (all major UK airports)</li>
-            <li>Long-distance travel</li>
-            <li>City-to-city travel</li>
-            <li>Corporate accounts & business travel</li>
-            <li>Event and seasonal travel</li>
-          </ul>
+          <OurServices />
 
           <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Our Vehicles

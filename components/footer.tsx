@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import React from 'react';
-import { Car, Phone, Mail, MapPin} from 'lucide-react';
+import { Car, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from "next/navigation"
-import Image from "next/image"
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-gray text-white">
@@ -11,45 +11,56 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-             <Link href="/" className="flex items-center space-x-2">
+              <Link href="/" className="flex items-center space-x-2">
                 <Image
-                        className="dark:invert"
-                        src="/a2blogo.svg"
-                        alt="Vercel logomark"
-                        width={120}
-                        height={120}
-                      />
-          
-          </Link>
+                  className="dark:invert"
+                  src="/a2blogo.svg"
+                  alt="Vercel logomark"
+                  width={120}
+                  height={120}
+                />
+              </Link>
             </div>
             <p className="text-slate-300 mb-4 max-w-md">
-              Reliable Airport Transfers & Executive Travel<br/>
-              <span className='text-xs'>Professional, punctual, and comfortable travel — operational since 1999.</span>
+              Reliable Airport Transfers & Executive Travel
+              <br />
+              <span className="text-xs">
+                Professional, punctual, and comfortable travel — operational
+                since 1999.
+              </span>
             </p>
             <div className="flex space-x-2">
-             <Link href="https://www.facebook.com/a2bcars.net" className="flex items-center space-x-2"><Image
-                        className="dark:invert #ffffff"
-                        src="/facebook.svg"
-                        alt="Vercel logomark"
-                        width={20}
-                        height={20}
-                      /></Link>
-                      <Link  href="https://x.com/a2bcars1"><Image
-                        className="dark:invert"
-                        src="/x.svg"
-                        alt="Vercel logomark"
-                        width={20}
-                        height={20}
-                      /></Link>
-                      <Link  href="https://www.instagram.com/a2b.cars/"><Image
-                        className="dark:invert"
-                        src="/instagram.svg"
-                        alt="Vercel logomark"
-                        width={20}
-                        height={20}
-                      /></Link>                      
-                      </div>
-                       
+              <Link
+                href="https://www.facebook.com/a2bcars.net"
+                className="flex items-center space-x-2"
+              >
+                <Image
+                  className="dark:invert #ffffff"
+                  src="/facebook.svg"
+                  alt="Vercel logomark"
+                  width={20}
+                  height={20}
+                />
+              </Link>
+              <Link href="https://x.com/a2bcars1">
+                <Image
+                  className="dark:invert"
+                  src="/x.svg"
+                  alt="Vercel logomark"
+                  width={20}
+                  height={20}
+                />
+              </Link>
+              <Link href="https://www.instagram.com/a2b.cars/">
+                <Image
+                  className="dark:invert"
+                  src="/instagram.svg"
+                  alt="Vercel logomark"
+                  width={20}
+                  height={20}
+                />
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -65,8 +76,10 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-slate-300">A2B Cars, Crendon House, Crendon Industrial Estate, Long Crendon. HP18 9BB</span>
-               
+                <span className="text-slate-300">
+                  A2B Cars, Crendon House, Crendon Industrial Estate, Long
+                  Crendon. HP18 9BB
+                </span>
               </div>
             </div>
           </div>
@@ -74,25 +87,30 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-slate-300 hover:text-blue-400 transition-colors">
+              <a
+                href="/privacy-policy"
+                className="block text-slate-300 hover:text-blue-400 transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="block text-slate-300 hover:text-blue-400 transition-colors">
+              <a
+                href="/terms-of-service"
+                className="block text-slate-300 hover:text-blue-400 transition-colors"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="block text-slate-300 hover:text-blue-400 transition-colors">
-                Support
+              <a
+                href="/cookie-policy"
+                className="block text-slate-300 hover:text-blue-400 transition-colors"
+              >
+                Cookie Policy
               </a>
-
-             
             </div>
           </div>
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-slate-400">
-            © 2026 A2B Cars All rights reserved.
-          </p>
+          <p className="text-slate-400">© 2026 A2B Cars All rights reserved.</p>
         </div>
       </div>
     </footer>
