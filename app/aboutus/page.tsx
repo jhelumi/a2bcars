@@ -25,9 +25,9 @@ export default async function AboutUs() {
             communicate clearly so you know exactly what&apos;s happening at
             every step.
           </p>
-          <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Our Commitment to You
-          </h1>
+          </h2>
           <p>When you travel with A2B Cars, you can expect:</p>
           <ul className="list-disc  list-inside ml-4 text-left">
             <li>Professional, polite drivers</li>
@@ -42,9 +42,9 @@ export default async function AboutUs() {
             every driver is DBS-checked, insured, medically cleared, and trained
             to a high standard.
           </p>
-          <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Why People Choose Us
-          </h1>
+          </h2>
           <p>
             Most of our customers come back again and again — some for more than
             a decade — because they know we do things properly. We respect your
@@ -53,9 +53,9 @@ export default async function AboutUs() {
             staff across the country, we make sure the journey is handled
             professionally and with care.
           </p>
-          <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Our Values
-          </h1>
+          </h2>
           <ul className="list-disc  list-inside ml-4 text-left">
             <li>Reliability</li>
             <li>Safety</li>
@@ -64,9 +64,9 @@ export default async function AboutUs() {
             <li>Respect</li>
           </ul>
 
-          <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Serving Our Region
-          </h1>
+          </h2>
           <p>
             We proudly cover Buckinghamshire, South Oxfordshire & Hertfordshire,
             with a strong local presence in Aylesbury, Thame, Haddenham, Long
@@ -76,16 +76,14 @@ export default async function AboutUs() {
             and stress-free as possible.
           </p>
 
-          <h1 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
             Ready to Travel With Us?
-          </h1>
+          </h2>
 
           <p>
             We look forward to providing you with a smooth, calm, and reliable
             travel experience.
           </p>
-
-          <p>[Get a Quote]</p>
 
           <GoogleReviews />
         </div>
