@@ -30,51 +30,89 @@ export default function Home() {
             don&apos;t send random drivers. When you book with us, we look after
             your journey properly from start to finish.
           </p>
-          <section>
-            <h2>What We Really Deliver</h2>
-            <p>
-              Every transport company can provide a car and a driver. What we
-              deliver goes further.
-            </p>
-            <ul className="list-disc  list-inside ml-4 text-left">
-              <li>Trust built over time, not anonymous rides.</li>
-              <li>
-                Familiarity with drivers you recognise and feel comfortable
-                with.
-              </li>
-              <li>A human relationship, not a booking reference.</li>
-              <li>Accountability for every journey.</li>
-              <li>Safety and continuity, handled properly every time.</li>
-            </ul>
-          </section>
-          <section>
-            <h2 className="flex text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-              Trusted & Compliant
-            </h2>
-            <ul className="list-disc  list-inside ml-4 text-left">
-              <li>Licensed Operator – Buckinghamshire Council</li>
-              <li>Fully Insured – Hire & Reward</li>
-              <li>Enhanced DBS-Checked Drivers</li>
-              <li>Annual Medical & Vehicle Compliance Checks</li>
-              <li>Executive-Standard Vehicles</li>
-            </ul>
-          </section>
-          <section>
-            <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-              Why Travel With Us
-            </h2>
-            <ul className="list-disc  list-inside ml-4 text-left">
-              <li>On-time pickups, every time</li>
-              <li>Clean, executive vehicles</li>
-              <li>Professional, polite drivers</li>
-              <li>Safe, comfortable journeys</li>
-              <li>Clear communication</li>
-              <li>Pre-booked service only</li>
-            </ul>
-          </section>
-          <OurServices />
 
-          <OurVehicles />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2>What We Really Deliver</h2>
+                <p>
+                  Every transport company can provide a car and a driver. What
+                  we deliver goes further.
+                </p>
+                <ul className="list-disc  list-inside ml-4 text-left">
+                  <li>Trust built over time, not anonymous rides.</li>
+                  <li>
+                    Familiarity with drivers you recognise and feel comfortable
+                    with.
+                  </li>
+                  <li>A human relationship, not a booking reference.</li>
+                  <li>Accountability for every journey.</li>
+                  <li>Safety and continuity, handled properly every time.</li>
+                </ul>
+              </section>
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2 className="flex text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  Trusted & Compliant
+                </h2>
+                <ul className="list-disc  list-inside ml-4 text-left">
+                  <li>Licensed Operator – Buckinghamshire Council</li>
+                  <li>Fully Insured – Hire & Reward</li>
+                  <li>Enhanced DBS-Checked Drivers</li>
+                  <li>Annual Medical & Vehicle Compliance Checks</li>
+                  <li>Executive-Standard Vehicles</li>
+                </ul>
+              </section>
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  Why Travel With Us
+                </h2>
+                <ul className="list-disc  list-inside ml-4 text-left">
+                  <li>On-time pickups, every time</li>
+                  <li>Clean, executive vehicles</li>
+                  <li>Professional, polite drivers</li>
+                  <li>Safe, comfortable journeys</li>
+                  <li>Clear communication</li>
+                  <li>Pre-booked service only</li>
+                </ul>
+              </section>
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <OurServices />
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <OurVehicles />
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <GetQuote />
+            </div>
+          </div>
+          <div className="bg-white rounded-lg border border-blue-200 p-6">
+            <section>
+              <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                Customer Reviews
+              </h2>
+              <ul className="list-inside">
+                <li>
+                  We work with companies, families, and frequent flyers across
+                  Buckinghamshire, South Oxfordshire & Hertfordshire. Many of
+                  our clients have stayed with us for years because they trust
+                  us to do things properly and consistently.
+                </li>
+              </ul>
+              <div className="flex flex-col sm:flex-row sm:justify-around w-full h-120 items-center gap-5">
+                <div>
+                  <TripAdvisor />
+                </div>
+                <div>
+                  <ReviewCarousel />
+                </div>
+              </div>
+            </section>
+          </div>
           {/* <section>
             <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
               Trusted by Businesses & Regular Travellers
@@ -88,28 +126,6 @@ export default function Home() {
               </li>
             </ul>
           </section> */}
-          <section>
-            <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-              Customer Reviews
-            </h2>
-            <ul className="list-inside">
-              <li>
-                We work with companies, families, and frequent flyers across
-                Buckinghamshire, South Oxfordshire & Hertfordshire. Many of our
-                clients have stayed with us for years because they trust us to
-                do things properly and consistently.
-              </li>
-            </ul>
-            <div className="flex flex-col sm:flex-row sm:justify-around w-full h-120 items-center gap-5">
-              <div>
-                <TripAdvisor />
-              </div>
-              <div>
-                <ReviewCarousel />
-              </div>
-            </div>
-          </section>
-          <GetQuote />
         </div>
       </main>
     </div>
