@@ -3,6 +3,7 @@ import Header from '../../components/header';
 import { Mail, Phone, Hourglass } from 'lucide-react';
 import Link from 'next/link';
 import BookingForm from '../../components/bookingQuote/BookingQuoteForm';
+import QuotationForm from '@/components/bookingQuote/quotationForm';
 
 export default function Quotation() {
   return (
@@ -14,16 +15,12 @@ export default function Quotation() {
             <h1 className="text-3xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
               Quotation Form
             </h1>
-            <p>
-              Please use this form for requesting a hassle free quote. If you
-              require an taxi within 24hrs, please call our office on 01844
-              208125.
-            </p>
           </div>
 
           <div className="col-span-12 md:col-span-6 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
             <div className="p-8">
-              <BookingForm />
+              {/* <BookingForm /> */}
+              <QuotationForm />
             </div>
           </div>
           <div></div>

@@ -384,7 +384,7 @@ const BookingForm: React.FC = () => {
           <Loader2 className="animate-spin w-5 h-5" />
         ) : (
           <>
-            <Send className="w-5 h-5" /> Get Instant Quote
+            <Send className="w-5 h-5" /> Get Quote
           </>
         )}
       </button>

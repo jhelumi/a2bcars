@@ -63,9 +63,14 @@ const Header: React.FC<HeaderProps> = ({ userRole }) => {
               height={120}
             />
           </Link>
-          <div className="flex text-white lg:text-xl md:text-sm font-semibold gap-2">
-            <Phone className="h-6 w-6 text-blue-400" />
-            01844 208125
+          <div>
+            <Link
+              href="https://wa.me/447435964303"
+              className="flex text-white lg:text-xl md:text-sm font-semibold gap-2"
+            >
+              <Phone className="h-6 w-6 text-blue-400" />
+              01844 208125
+            </Link>
           </div>
           {userRole && (
             <>
