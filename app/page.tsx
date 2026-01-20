@@ -34,12 +34,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg border border-blue-200 p-6">
               <section>
-                <h2>What We Really Deliver</h2>
-                <p>
+                <h2 className="flex text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  What We Really Deliver
+                </h2>
+                <p className="mb-3 text-body">
                   Every transport company can provide a car and a driver. What
                   we deliver goes further.
                 </p>
-                <ul className="list-disc  list-inside ml-4 text-left">
+                <ul className="list-disc  list-inside ml-6 text-left">
                   <li>Trust built over time, not anonymous rides.</li>
                   <li>
                     Familiarity with drivers you recognise and feel comfortable
