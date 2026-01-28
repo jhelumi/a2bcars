@@ -66,7 +66,7 @@ export function BrandCarousel() {
                   width: '100%',
                 }}
               >
-                <CardContent className="grid grid-flow-row p-2 w-full sm:h-100 md:h-138 ">
+                <CardContent className="grid grid-flow-row p-2 w-full md:h-138 sm:h-80">
                   <span className="text-3xl text-brand-blue font-semibold mb-0">
                     {carouselDescriptions[index].title}
                   </span>
