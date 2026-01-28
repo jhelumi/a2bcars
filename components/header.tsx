@@ -13,6 +13,7 @@ import {
   PhoneIncoming,
   Waypoints,
   Phone,
+  MessageCircle,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -63,13 +64,29 @@ const Header: React.FC<HeaderProps> = ({ userRole }) => {
               height={120}
             />
           </Link>
-          <div>
+          <div className="grid grid-cols-3 gap-4 ">
+            <Link
+              href="tel:+441844208125"
+              className="flex text-white lg:text-xl md:text-sm font-semibold gap-2"
+            >
+              <Phone className="h-6 w-6 text-blue-400" />
+            </Link>
             <Link
               href="https://wa.me/447435964303"
               className="flex text-white lg:text-xl md:text-sm font-semibold gap-2"
             >
-              <Phone className="h-6 w-6 text-blue-400" />
-              01844 208125
+              <MessageCircle className="h-6 w-6 text-blue-400 " />
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.tripadvisor.co.uk/Attraction_Review-g4208470-d17837562-Reviews-A2B_Cars-Long_Crendon_Aylesbury_Aylesbury_Vale_Buckinghamshire_England.html"
+            >
+              <Image
+                src="/tripadvisor_award.png"
+                alt="TripAdvisor"
+                width="40"
+                height="40"
+              />
             </Link>
           </div>
           {userRole && (

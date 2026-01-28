@@ -58,9 +58,15 @@ export function BrandCarousel() {
               <Card
                 style={{
                   background: 'url(/slider/' + (index + 1) + '.jpg',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundAttachment: 'fixed',
+                  backgroundPosition: 'center',
+                  backgroundPositionY: 'center',
+                  backgroundSize: 'cover',
+                  width: '100%',
                 }}
               >
-                <CardContent className="grid grid-flow-row p-2 w-full h-138">
+                <CardContent className="grid grid-flow-row p-2 w-full sm:h-100 md:h-138 ">
                   <span className="text-3xl text-brand-blue font-semibold mb-0">
                     {carouselDescriptions[index].title}
                   </span>
