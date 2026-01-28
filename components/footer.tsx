@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { Car, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+
 import Image from 'next/image';
-import TripAdvisorWidgets from './TripAdvisorWidgets';
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-gray text-white">
