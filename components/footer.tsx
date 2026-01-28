@@ -118,6 +118,12 @@ const Footer: React.FC = () => {
               >
                 Cookie Policy
               </a>
+              <a
+                href="/faq"
+                className="block text-slate-300 hover:text-blue-400 transition-colors"
+              >
+                FAQs
+              </a>
             </div>
           </div>
         </div>

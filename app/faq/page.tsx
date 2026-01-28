@@ -1,3 +1,4 @@
+import CollapsibleFormDemo from '@/components/Faqs';
 import Header from '../../components/header';
 
 export default async function Faqs() {
@@ -15,7 +16,7 @@ export default async function Faqs() {
             always happy to help.
           </p>
 
-          <Faqs />
+          <CollapsibleFormDemo />
         </div>
       </main>
     </div>
