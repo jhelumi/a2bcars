@@ -4,6 +4,7 @@ import { Car, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import TripAdvisorWidgets from './TripAdvisorWidgets';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-gray text-white">
@@ -29,37 +30,49 @@ const Footer: React.FC = () => {
                 since 1999.
               </span>
             </p>
-            <div className="flex space-x-2">
-              <Link
-                href="https://www.facebook.com/a2bcars.net"
-                className="flex items-center space-x-2"
-              >
-                <Image
-                  className="dark:invert #ffffff"
-                  src="/facebook.svg"
-                  alt="Vercel logomark"
-                  width={20}
-                  height={20}
-                />
-              </Link>
-              <Link href="https://x.com/a2bcars1">
-                <Image
-                  className="dark:invert"
-                  src="/x.svg"
-                  alt="Vercel logomark"
-                  width={20}
-                  height={20}
-                />
-              </Link>
-              <Link href="https://www.instagram.com/a2b.cars/">
-                <Image
-                  className="dark:invert"
-                  src="/instagram.svg"
-                  alt="Vercel logomark"
-                  width={20}
-                  height={20}
-                />
-              </Link>
+            <div className="grid grid-cols-2 gap-4 ">
+              <div className="flex space-x-2">
+                <Link href="https://www.facebook.com/a2bcars.net">
+                  <Image
+                    className="dark:invert #ffffff"
+                    src="/facebook.svg"
+                    alt="Vercel logomark"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+                <Link href="https://x.com/a2bcars1">
+                  <Image
+                    className="dark:invert"
+                    src="/x.svg"
+                    alt="Vercel logomark"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+                <Link href="https://www.instagram.com/a2b.cars/">
+                  <Image
+                    className="dark:invert"
+                    src="/instagram.svg"
+                    alt="Vercel logomark"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+              </div>
+              <div>
+                <Link
+                  target="_blank"
+                  href="https://www.tripadvisor.co.uk/Attraction_Review-g4208470-d17837562-Reviews-A2B_Cars-Long_Crendon_Aylesbury_Aylesbury_Vale_Buckinghamshire_England.html"
+                >
+                  <Image
+                    src="/tripadvisor_award.png"
+                    alt="TripAdvisor"
+                    width="60"
+                    height="60"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
 

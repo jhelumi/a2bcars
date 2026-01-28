@@ -14,79 +14,106 @@ export default function AirportTransfers() {
           <p className="text-lg leading-8 dark:text-zinc-400">
             Travelling to or from the airport should feel simple and
             stress-free. At A2B Cars, we make sure your journey is calm,
-            comfortable, and on time — every single time. Whether it’s an
+            comfortable, and on time — every single time. Whether it&apos;s an
             early-morning departure, a late-night arrival, or a long-haul
             return, we look after everything carefully from the moment you book
             with us.
             <br />
-            We have been operational since 1999, and over the years we’ve helped
-            thousands of customers travel smoothly to all major UK airports. Our
-            service is reliable, professional, and focused on giving you a
-            peaceful start or finish to your journey.
-          </p>
-          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-            What’s Included in Your Airport Transfer
-          </h2>
-
-          <ul className="list-disc  list-inside ml-4 text-left">
-            <li>On-time pickup with clear communication</li>
-            <li>Meet-and-greet service available on request</li>
-            <li>Flight tracking for delays or early arrivals</li>
-            <li>Help with luggage</li>
-            <li>Clean, spacious, executive vehicles</li>
-            <li>Professional, DBS-checked, insured drivers</li>
-            <li>
-              Smooth, calm driving with safety at the centre of every journey
-            </li>
-          </ul>
-          <p>
-            Your driver will always arrive early, assist you with your bags, and
-            ensure you feel comfortable before the journey begins.
+            We have been operational since 1999, and over the years we&apos;ve
+            helped thousands of customers travel smoothly to all major UK
+            airports. Our service is reliable, professional, and focused on
+            giving you a peaceful start or finish to your journey.
           </p>
 
-          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-            Airports We Cover
-          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  What&apos;s Included in Your Airport Transfer
+                </h2>
 
-          <ul className="list-disc  list-inside ml-4 text-left">
-            <li>Heathrow Airport</li>
-            <li>Gatwick Airport</li>
-            <li>Luton Airport</li>
-            <li>Stansted Airport</li>
-            <li>London City Airport</li>
-            <li>Birmingham Airport</li>
-          </ul>
-          <p>
-            If you need travel to another airport not listed here, just ask — we
-            can usually accommodate it.
-          </p>
+                <ul className="list-disc  list-inside ml-4 mb-4 text-left">
+                  <li>On-time pickup with clear communication</li>
+                  <li>Meet-and-greet service available on request</li>
+                  <li>Flight tracking for delays or early arrivals</li>
+                  <li>Help with luggage</li>
+                  <li>Clean, spacious, executive vehicles</li>
+                  <li>Professional, DBS-checked, insured drivers</li>
+                  <li>
+                    Smooth, calm driving with safety at the centre of every
+                    journey
+                  </li>
+                </ul>
+                <p>
+                  Your driver will always arrive early, assist you with your
+                  bags, and ensure you feel comfortable before the journey
+                  begins.
+                </p>
+              </section>
+            </div>
 
-          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-            Why Choose A2B Cars for Airport Travel
-          </h2>
-          <ul className="list-disc  list-inside ml-4 text-left">
-            <li>Reliable, punctual service</li>
-            <li>Excellent communication before, during, and after your trip</li>
-            <li>Flight monitoring to avoid any waiting around</li>
-            <li>Executive-licensed vehicles only</li>
-            <li>
-              Safe and comfortable journeys, even during busy travel seasons
-            </li>
-            <li>Over two decades of experience</li>
-          </ul>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  Airports We Cover
+                </h2>
 
-          <OurVehicles />
+                <ul className="list-disc  list-inside ml-4 mb-4 text-left">
+                  <li>Heathrow Airport</li>
+                  <li>Gatwick Airport</li>
+                  <li>Luton Airport</li>
+                  <li>Stansted Airport</li>
+                  <li>London City Airport</li>
+                  <li>Birmingham Airport</li>
+                </ul>
+                <p>
+                  If you need travel to another airport not listed here, just
+                  ask — we can usually accommodate it.
+                </p>
+              </section>
+            </div>
 
-          <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
-            Travelling for Work?
-          </h2>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  Why Choose A2B Cars for Airport Travel
+                </h2>
+                <ul className="list-disc  list-inside ml-4 mb-4 text-left">
+                  <li>Reliable, punctual service</li>
+                  <li>
+                    Excellent communication before, during, and after your trip
+                  </li>
+                  <li>Flight monitoring to avoid any waiting around</li>
+                  <li>Executive-licensed vehicles only</li>
+                  <li>
+                    Safe and comfortable journeys, even during busy travel
+                    seasons
+                  </li>
+                  <li>Over two decades of experience</li>
+                </ul>
+              </section>
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <OurVehicles />
+              </section>
+            </div>
+            <div className="bg-white rounded-lg border border-blue-200 p-6">
+              <section>
+                <h2 className="text-xl font-semibold leading-10 tracking-tight text-brand-blue dark:text-zinc-50">
+                  Travelling for Work?
+                </h2>
 
-          <p>
-            We also handle corporate airport travel for businesses across
-            Buckinghamshire, South Oxfordshire & Hertfordshire. If your company
-            requires regular airport transfers, we can provide a reliable, calm
-            service with simple invoicing and clear communication.
-          </p>
+                <p>
+                  We also handle corporate airport travel for businesses across
+                  Buckinghamshire, South Oxfordshire & Hertfordshire. If your
+                  company requires regular airport transfers, we can provide a
+                  reliable, calm service with simple invoicing and clear
+                  communication.
+                </p>
+              </section>
+            </div>
+          </div>
         </div>
       </main>
     </div>
